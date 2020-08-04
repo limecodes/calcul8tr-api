@@ -8,11 +8,13 @@
 
 ## Technical Considerations
 
+- I'm not using `create-react-app` to scaffold the project, instead I'm doing all configurations by hand to avoid blind configuration so that I have full control over the dependencies that I'm installing and using
+
 - For simplicity, I decided not to create a containerized environment with Docker. Typically, this would be the industry standard practice. However for simplicity the application can be run locally if node is installed.
 
 ## Installation Instructions
 
-*Prerequisites*
+**Prerequisites**
 
 Please ensure that you have NodeJS & Yarn installed on your machine and you are using the following version:
 
@@ -29,14 +31,14 @@ Before installing the API & Client, please create a folder that will house the t
 1. Clone the API repo `git clone git@github.com:limecodes/calcul8tr-api.git`
 1. Clone the client repo `git clone git@github.com:limecodes/calcul8tr-client.git`
 
-*Install & run the API*
+**Install & run the API**
 
 1. Navigate to the API repo directory: `cd calcul8tr-api`
 1. Install dependencies by running `yarn install`
 1. Run the application by running `yarn run start` or simply `yarn start`
 1. The application should start in your terminal window (don't close this window)
 
-*Install & Run Front-end*
+**Install & Run Front-end**
 
 1. Open a new terminal window or terminal tab and do the following steps
 1. Navigate to the created "root" folder: (ex `cd calcul8tr`) _If you're in the API folder, `cd ..`_
@@ -47,7 +49,7 @@ Before installing the API & Client, please create a folder that will house the t
 1. If the application does not open, navigate to `http://localhost:3000` in your browser
 1. Don't close this terminal tab with the running application
 
-*Running the tests*
+**Running the tests**
 
 You may run the tests within the repository folder by running `yarn run test` or simply `yarn test`
 
