@@ -26,7 +26,6 @@ app.post('/calculate', [
   body('expression')
     .not().isEmpty().withMessage('Cannot be empty')
 ], (req, res) => {
-  // res.writeHead(200, {'Content-Type': 'application/json'});
   const errors = validationResult(req);
 
   if (!errors.isEmpty()){
