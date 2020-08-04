@@ -25,7 +25,6 @@ app.use(function(req, res, next) {
 app.post('/calculate', [
   body('expression')
     .not().isEmpty().withMessage('Cannot be empty')
-    .trim(),
 ], (req, res) => {
   // res.writeHead(200, {'Content-Type': 'application/json'});
   const errors = validationResult(req);
@@ -33,7 +32,10 @@ app.post('/calculate', [
   if (!errors.isEmpty()){
     return res.status(400).json({ errors: errors.array() });
   }
-  res.send(JSON.stringify(Calculate(req.body.expression)));
+  const calculate = Calculate(req.body.expression);
+  const code = !calculate.error ? 200 : 500;
+
+  return res.status(code).json(calculate);
 });
 
 export default app;
